@@ -1,0 +1,25 @@
+```
+Employee ID,Employee Name,Date,Time In,Time Out,Hours Worked,Designation,Billable / Non-Billable
+E001,John Doe,2021-09-01,09:00,17:00,8,Manager,Billable
+E002,Jane Smith,2021-09-01,08:30,16:30,8,Engineer,Billable
+E003,Michael Johnson,2021-09-01,08:45,17:15,8.5,Designer,Billable
+E004,Emily Wilson,2021-09-01,09:15,17:45,8.5,Developer,Billable
+E005,David Brown,2021-09-01,08:00,16:00,8,Analyst,Billable
+E006,Emma Davis,2021-09-02,09:30,17:30,8,Manager,Billable
+E007,Christopher Wilson,2021-09-02,09:15,17:15,8,Engineer,Billable
+E008,Sophia Anderson,2021-09-02,08:45,17:30,8.75,Designer,Billable
+E009,Isabella Johnson,2021-09-02,08:30,16:30,8,Developer,Billable
+E010,James Smith,2021-09-02,08:00,16:00,8,Analyst,Billable
+E011,Olivia Wilson,2021-09-03,09:00,17:00,8,Manager,Billable
+E012,Liam Brown,2021-09-03,08:45,17:45,9,Engineer,Billable
+E013,Ava Davis,2021-09-03,09:15,17:15,8,Designer,Billable
+E014,Ethan Johnson,2021-09-03,08:30,17:30,9,Developer,Billable
+E015,Mia Smith,2021-09-03,08:00,16:00,8,Analyst,Billable
+E016,Noah Wilson,2021-09-04,09:30,17:30,8,Manager,Billable
+E017,Charlotte Anderson,2021-09-04,09:15,17:30,8.25,Engineer,Billable
+E018,Jameson Johnson,2021-09-04,08:45,17:15,8.5,Designer,Billable
+E019,Scarlett Davis,2021-09-04,08:30,16:30,8,Developer,Billable
+E020,Benjamin Brown,2021-09-04,08:00,16:00,8,Analyst,Billable
+```
+
+Please note that this is just a sample data and the values are randomly generated.
