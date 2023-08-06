@@ -4,6 +4,7 @@
 const fs = require("fs");
 const { Configuration, OpenAIApi } = require("openai");
 require("dotenv").config();
+const puppeteer = require('puppeteer');
 
 /**
  * Configuration of OpenAI
@@ -24,12 +25,12 @@ const generateAttendance = async () => {
       {
         role: "system",
         content:
-          "generate an array of users with fake data in json format, consisting Employee ID, Employee Name, Date, Time In, Time Out, Hours Worked, and Designation, Billable / Non-Billable. Just give me the data in csv format",
+          "generate an array of users with fake data in json format, consisting Employee ID, Employee Name, Date, Time In, Time Out, Hours Worked, and Designation, Billable / Non-Billable. Keep some billable and some non billable. Just give me the data in csv format",
       },
       {
         role: "assistant",
         content:
-        "Sure! I'll generate the csv content for you. Only CSV file content nothing else.",
+          "Sure! I'll generate the csv content for you and give you only the CSV content nothing else. Only CSV file content nothing else.",
       },
     ],
   });
@@ -61,6 +62,7 @@ const generatePayroll = async () => {
   const data = (chatCompletion.data.choices[0].message.content);
   console.log(data);
   writeFile('employee_payroll.csv', data);
+  createPdfFromText(data, 'output.pdf');
 };
 
 /**
@@ -97,3 +99,16 @@ function writeFile(fileName, data) {
 }
 
 main();
+
+async function createPdfFromText(text, pdfFilePath) {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  const htmlContent = `<html><body><p>${text}</p></body></html>`;
+
+  await page.setContent(htmlContent);
+  await page.pdf({ path: pdfFilePath, format: 'A4' });
+
+  await browser.close();
+  console.log('PDF created successfully!');
+}
